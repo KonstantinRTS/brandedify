@@ -3,6 +3,7 @@ import { usePathname } from "next/navigation";
 import "@/styles/header.scss";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import LangSwitcher from "./LangSwitcher";
 
 const Header = () => {
   const pathname = usePathname();
@@ -85,6 +86,9 @@ const Header = () => {
                 Contact
               </Link>
             </nav>
+            <div className="language">
+              <LangSwitcher />
+            </div>
             <Link href="/request-form" className="head-button">
               Get started
             </Link>
